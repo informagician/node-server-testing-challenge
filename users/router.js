@@ -11,12 +11,10 @@ let users = [
     }
 ]
 
-let id = users[users.length-1].id
-
 
 router.post('/', (req,res) => {
     const user = req.body
-    user.id = id + 1
+    user.id = users.length
     add(user)
     console.log(users)
     res.status(201).json(users[users.length-1])
