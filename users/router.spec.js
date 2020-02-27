@@ -70,7 +70,7 @@ describe('users router', function() {
             return request(server)
             .delete('/api/users/3')
             .then(res => {
-                expect(res.body.length).toBe(4)
+                expect(res.body.length).toBe(3)
             })
         })
     })
